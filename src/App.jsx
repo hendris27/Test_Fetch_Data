@@ -53,7 +53,7 @@ function App() {
 	}
 
 	return (
-		<div>
+		<div className="bg-gray-100">
 			<h1>User Data List</h1>
 			<div>
 				<label htmlFor="emailSearch">Search by Email:</label>
