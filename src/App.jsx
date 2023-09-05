@@ -13,6 +13,30 @@ const userData = [
 		isMarried: false,
 		programmingLanguages: ['PHP', 'Ruby'],
 	},
+	{
+		id: 3,
+		email: 'bell@mail.com',
+		isMarried: false,
+		programmingLanguages: ['Go', 'Javascript', 'Ruby', 'C#'],
+	},
+	{
+		id: 4,
+		email: 'thomas@mail.com',
+		isMarried: false,
+		programmingLanguages: ['C#', 'Rust', 'Typescript'],
+	},
+	{
+		id: 5,
+		email: 'alva@mail.com',
+		isMarried: false,
+		programmingLanguages: ['Rust', 'Python'],
+	},
+	{
+		id: 6,
+		email: 'edison@mail.com',
+		isMarried: false,
+		programmingLanguages: ['Ruby', 'Python', 'Go'],
+	},
 ]
 
 function App() {
