@@ -53,9 +53,9 @@ function App() {
 	}
 
 	return (
-		<div className="bg-gray-100">
+		<div className="bg-gray-100 justify-center">
 			<h1>User Data List</h1>
-			<div>
+			<div className="mt-12">
 				<label htmlFor="emailSearch">Search by Email:</label>
 				<input type="text" id="emailSearch" value={searchEmail} onChange={handleSearch} />
 			</div>
