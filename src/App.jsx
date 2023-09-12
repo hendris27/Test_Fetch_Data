@@ -53,38 +53,41 @@ function App() {
 	}
 
 	return (
-		<div className="bg-gray-100 justify-center">
-			<h1>User Data List</h1>
-			<div className="mt-12">
-				<label htmlFor="emailSearch">Search by Email:</label>
-				<input type="text" id="emailSearch" value={searchEmail} onChange={handleSearch} />
-			</div>
-			<table>
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Email</th>
-						<th>Married</th>
-						<th>Programming Languages</th>
-					</tr>
-				</thead>
-				<tbody>
-					{filteredUsers.map((user) => (
-						<tr key={user.id}>
-							<td>{user.id}</td>
-							<td>{user.email}</td>
-							<td>{user.isMarried ? 'Yes' : 'No'}</td>
-							<td>
-								<ul>
-									{user.programmingLanguages.map((lang, index) => (
-										<li key={index}>{lang}</li>
-									))}
-								</ul>
-							</td>
+		<div className="flex  w-full justify-center bg-blue-100 min-h-screen">
+			<div className="w-full items-center mx-4">
+				<div className="mt-12 flex gap-3 h-8">
+					<label htmlFor="emailSearch" className=" flex justify-center items-center">
+						Search by Email:
+					</label>
+					<input type="text" id="emailSearch" value={searchEmail} onChange={handleSearch} />
+				</div>
+				<table className="mt-12 w-full">
+					<thead>
+						<tr className="bg-blue-400 text-white text-lg">
+							<th className="w-16 justify-center">ID</th>
+							<th className="w-[200px] border-2 justify-center">Email</th>
+							<th className="w-[100px]">Married</th>
+							<th className="w-[300px] ">Programming Languages</th>
 						</tr>
-					))}
-				</tbody>
-			</table>
+					</thead>
+					<tbody className="w-full">
+						{filteredUsers.map((user) => (
+							<tr className="" key={user.id}>
+								<td className="w-16 text-center items-center border-2">{user.id}</td>
+								<td className="w-[200px] border-2 justify-center text-center">{user.email}</td>
+								<td className="w-[100px] text-center border-2">{user.isMarried ? 'Yes' : 'No'}</td>
+								<td className="text-center border-2">
+									<ul className="flex flex-col gap-4">
+										{user.programmingLanguages.map((lang, index) => (
+											<li key={index}>{lang}</li>
+										))}
+									</ul>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
 		</div>
 	)
 }
