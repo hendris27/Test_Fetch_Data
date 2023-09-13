@@ -85,6 +85,7 @@ function App() {
 								</td>
 							</tr>
 						))}
+						{filteredUsers <= 1 && <div>user not found</div>}
 					</tbody>
 				</table>
 			</div>
